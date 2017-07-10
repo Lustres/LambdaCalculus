@@ -1,15 +1,5 @@
 from fundation import *
 
-def ans(term):
-    return str(reduce(term))
-
-
-def call(self, *args, **kwargs):
-    return Call(self, args[0])
-
-
-Term.__call__ = call
-
 
 def test_boolean():
     assert ans(IF(TRUE)(Variable('happy'))(Variable('sad'))) == 'happy'
