@@ -1,6 +1,6 @@
 import ast, sys
 
-import core
+from .core import *
 
 
 class Assign(object):
@@ -29,17 +29,25 @@ class LambdaBuilder(object):
                 stmts.append(r)
         return stmts
 
+    def visit_Expr(self, node):
+        return self.visit(node.value)
+
     def visit_Assign(self, node):
         return Assign(self.visit(node.targets[0]), self.visit(node.value))
 
     def visit_Name(self, node):
-        return calculus.Variable(node.id)
+        return Variable(node.id)
 
     def visit_Lambda(self, node):
-        return calculus.Function(node.args.args[0].arg, self.visit(node.body))
+        return Function(node.args.args[0].arg, self.visit(node.body))
 
     def visit_Call(self, node):
-        return calculus.Call(self.visit(node.func), self.visit(node.args[0]))
+        return Call(self.visit(node.func), self.visit(node.args[0]))
+
+
+def parse(s):
+    l = LambdaBuilder().visit(ast.parse(s))
+    return repr(l)
 
 
 def main():
