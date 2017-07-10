@@ -1,4 +1,9 @@
-from core import *
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath('.'))
+
+from lambda_calculus.core import *
 
 
 one = Function('p', Function('x', Call(Variable('p'), Variable('x'))))
