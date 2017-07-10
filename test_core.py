@@ -1,4 +1,4 @@
-from calculus import *
+from core import *
 
 
 one = Function('p', Function('x', Call(Variable('p'), Variable('x'))))

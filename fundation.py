@@ -1,4 +1,4 @@
-from .calculus import *
+from .core import *
 
 
 def eval(term):

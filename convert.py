@@ -1,6 +1,6 @@
 import ast, sys
 
-import calculus
+import core
 
 
 class Assign(object):
