@@ -47,7 +47,7 @@ class LambdaBuilder(object):
 
 def parse(s):
     l = LambdaBuilder().visit(ast.parse(s))
-    return repr(l)
+    return l
 
 
 def main():

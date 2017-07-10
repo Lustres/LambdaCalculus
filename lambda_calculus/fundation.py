@@ -1,5 +1,6 @@
 from .core import *
 
+from .convert import parse
 
 def eval(term):
     return str(reduce(term))
