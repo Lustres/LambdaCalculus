@@ -1,14 +1,16 @@
-from calculus import *
+from .calculus import *
 
-def ans(term):
+
+def eval(term):
     return str(reduce(term))
 
 
-def call(self, *args, **kwargs):
+def _call(self, *args, **kwargs):
     return Call(self, args[0])
 
 
-Term.__call__ = call
+Term.__call__ = _call
+
 
 Z = Function('g', Call(Function('x', Call(Variable('g'), Function('y', Call(Call(Variable('x'), Variable('x')), Variable('y'))))), Function('x', Call(Variable('g'), Function('y', Call(Call(Variable('x'), Variable('x')), Variable('y')))))))
 
