@@ -1,6 +1,5 @@
 # LambdaCalculus
- λ-calculus by Python
- This module could simulate the execute of λ-calculus
+ This module could simulate the execute of λ-calculus by Python
 
 # Module Structure
 * core.py: core component of lambda like Variable, Function reduction
