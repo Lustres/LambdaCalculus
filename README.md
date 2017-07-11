@@ -1,3 +1,8 @@
+[![Python Versions][python version badge]][python]
+[![Build Status][travis badge]][travis]
+![Version][Version badge]
+
+
 # LambdaCalculus
  This module could simulate the execute of λ-calculus by Python
 
@@ -96,4 +101,11 @@ You could get more info from [https://github.com/Lustres/Under-Computeration/tre
 
 # Test
 	 $ pytest
+
+<!-- Badges -->
+[travis]: https://travis-ci.org/Lustres/LambdaCalculus
+[travis badge]: https://travis-ci.org/Lustres/LambdaCalculus.svg?branch=master
+[python version badge]: https://img.shields.io/badge/Python-3.6-blue.svg
+[python]: https://www.python.org
+[Version badge]: https://img.shields.io/badge/version-v1.0-blue.svg
 
